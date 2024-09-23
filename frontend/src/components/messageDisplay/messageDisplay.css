@@ -1,0 +1,15 @@
+.assistant-message {
+    width: 100%;
+    max-width: 500px;
+    word-wrap: break-word;
+    text-align: left;
+    padding: 10px;
+}
+
+.user-message {
+    width: 100%;
+    max-width: 500px;
+    word-wrap: break-word;
+    text-align: right;
+    padding: 10px;
+}

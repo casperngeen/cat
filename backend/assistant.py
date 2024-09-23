@@ -23,6 +23,7 @@ def get_cat(breed=None):
     # what will happen if the breed doesnt exist
     if response.status_code == 200:
         data = response.json()
+        print(data)
         url = data[0]['url']
         return url
     else:
@@ -38,7 +39,7 @@ def extract_assistant_message(messages):
             for content_block in message.content:
                 if content_block.type == 'text':
                     print(content_block.text.value)
-                    return {message.id: content_block.text.value}
+                    return {"message": content_block.text.value}
 
         
 def assistant_message(client: OpenAI, assistant, thread, user_prompt: str):

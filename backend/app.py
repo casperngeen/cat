@@ -1,9 +1,12 @@
 from flask import Flask, request, jsonify
+from flask_cors import CORS
 from openai import OpenAI
 import assistant
 
 # Initialize Flask app
 app = Flask(__name__)
+
+CORS(app, resources={r"/*": {"origins": "http://localhost:3000"}})
 
 client = OpenAI()
 assistant_id = "asst_4XsBFLsL5RiNNwDFkhBsYYbK"
